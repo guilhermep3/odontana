@@ -6,10 +6,10 @@ export const Hero = () => {
       <section id="hero">
          <div className="container">
             <div className="hero-left">
-               <h1 className="hero-title reveal-top">Experimente a <span>Excelência Odontológica</span> com um toque suave</h1>
-               <h2 className="hero-subtitle reveal-bottom">A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.</h2>
-               <Button text="Agendar" href="/schedule" classe="reveal-top" />
-               <div className="hero-rating reveal-bottom">
+               <h1 data-aos="zoom-in" className="hero-title">Experimente a <span>Excelência Odontológica</span> com um toque suave</h1>
+               <h2 data-aos="zoom-in" className="hero-subtitle">A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.</h2>
+               <Button text="Agendar" href="/schedule" dataAos="fade-up" />
+               <div data-aos="fade-up" className="hero-rating">
                   <div className="hero-rating-top">
                      <p>Avaliação Google</p>
                      <span>5.0</span>
@@ -23,8 +23,8 @@ export const Hero = () => {
                </div>
             </div>
             <div className="hero-right">
-               <div className="hero-relative">
-                  <img src="./dentista.png" alt="imagem da dentista Ana Vitoria" className="hero-image reveal-bottom" />
+               <div data-aos="zoom-in" className="hero-relative">
+                  <img src="./dentista.png" alt="imagem da dentista Ana Vitoria" className="hero-image" />
                   <div className="dentist-box">
                      <img src="./dentista-perfil.png" alt="imagem da dentista Ana Vitoria" />
                      <div>

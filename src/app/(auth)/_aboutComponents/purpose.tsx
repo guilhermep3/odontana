@@ -9,15 +9,15 @@ export const Purpose = () => {
                title={<>Nossos <span>Propósitos</span></>}
             />
             <div className='purposes'>
-               <div className='purpose reveal-bottom'>
+               <div className='purpose '>
                   <img src='./svgs/happy-teeth.svg' className='purpose-svg'/>
                   <p>Prezamos pelo bem-estar e saúde de nossos clientes. Cuidar do seu sorriso é cuidar da sua saúde.</p>
                </div>
-               <div className='purpose reveal-bottom'>
+               <div className='purpose '>
                   <img src='./svgs/technology-b3.svg' className='purpose-svg'/>
                   <p>Sempre usamos as tecnologias mais recentes para garantir o melhor resultado para você.</p>
                </div>
-               <div className='purpose reveal-bottom'>
+               <div className='purpose '>
                   <img src='./svgs/smile-circle-fill.svg' className='purpose-svg'/>
                   <p>Oferecemos um atendimento humanizado, focado no seu conforto e segurança em cada consulta.</p>
                </div>

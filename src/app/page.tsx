@@ -11,7 +11,7 @@ import { Team } from "./(auth)/_components/team"
 import { Rating } from "./(auth)/_components/rating";
 import { Local } from "./(auth)/_components/local";
 import { Footer } from "../components/footer";
-import ClientScrollReveal from "./(auth)/_components/clientScrollReveal";
+import { ClientScrollReveal } from "./(auth)/_components/clientScrollReveal";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/skeleton";
 

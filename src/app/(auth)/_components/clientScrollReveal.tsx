@@ -1,12 +1,19 @@
 "use client"
+import { ReactNode, useEffect } from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import dynamic from "next/dynamic"
-import React from "react"
+export const ClientScrollReveal = ({children}: {children: ReactNode}) => {
+   useEffect(() => {
+      AOS.init({
+         duration: 800,
+         easing: 'ease-in-out',
+         once: true,
+         delay: 100
+      })
+   }, [])
 
-const ScrollRevealWrapper = dynamic(() => import("@/utils/scrollRevealWrapper"), {
-   ssr: false
-})
-
-export default function ClientScrollReveal({children}: any) {
-   return <ScrollRevealWrapper>{children}</ScrollRevealWrapper>
+   return (
+      <div>{children}</div>
+   )
 }

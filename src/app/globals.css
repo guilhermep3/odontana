@@ -81,6 +81,7 @@ body {
 }
 .up-btn:hover{
   transform: scale(1.05);
+  background-color: var(--blue2);
 }
 .show-up-btn{
   opacity: 1;

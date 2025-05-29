@@ -5,7 +5,7 @@ export const GoTopButton = () => {
    const [isTop, setIsTop] = useState(false);
 
    useEffect(() => {
-      function checkScroll(){
+      function checkScroll() {
          setIsTop(window.scrollY < 400)
       }
 
@@ -17,7 +17,7 @@ export const GoTopButton = () => {
       }
    }, []);
 
-   function handleGoTop(){
+   function handleGoTop() {
       window.scrollTo({
          top: 0,
          behavior: 'smooth'
@@ -26,7 +26,7 @@ export const GoTopButton = () => {
 
    return (
       <div className={`up-btn ${isTop ? '' : 'show-up-btn'}`} onClick={handleGoTop}>
-         <img src="./svgs/arrow-top-chevron-chevron-top-svgrepo-com.svg" alt="" />
+         <img src="./svgs/arrow-top-chevron-chevron-top-svgrepo-com.svg" alt="arrow-top" />
       </div>
    )
 }

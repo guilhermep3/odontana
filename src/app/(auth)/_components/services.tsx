@@ -22,10 +22,10 @@ export const Services = () => {
       <section id="services">
          <div className="container">
             <TitleSection secId="Serviços" title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={true}/>
-            <p className="section-desc reveal-top">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
+            <p data-aos="zoom-in" className="section-desc">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
             <div className="services-list">
                {servicesDataSlice.map((item) => (
-                  <div className="service reveal-bottom" key={item.id}
+                  <div data-aos="fade-up" className="service" key={item.id}
                      onClick={() => handleShowModal(item)}>
                      <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
                      <img src={`./svgs/${item.icon}`} className="service-icon" alt={item.icon} />
@@ -37,7 +37,7 @@ export const Services = () => {
                   </div>
                ))}
             </div>
-            <Button href="/services" text="Ver todos"/>
+            <Button href="/services" text="Ver todos" dataAos="zoom-in"/>
          </div>
          {showModal && modalItem && <Modal infos={modalItem} setShowModal={() => setShowModal(!showModal)} />}
       </section>

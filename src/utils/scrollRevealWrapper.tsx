@@ -9,12 +9,12 @@ type props = {
 const ScrollRevealWrapper = ({children}: props) => {
       useEffect(() => {
          if (typeof window !== 'undefined') {
-            initScrollReveal('.reveal-top', revealFromTop);
-            initScrollReveal('.reveal-bottom', revealFromBottom);
+            initScrollReveal('.', revealFromTop);
+            initScrollReveal('.', revealFromBottom);
             initScrollReveal('.reveal-left', revealFromLeft);
             initScrollReveal('.reveal-right', revealFromRight);
-            initScrollReveal('.reveal-topD4', revealFromTopD4);
-            initScrollReveal('.reveal-bottomD4', revealFromBottomD4);
+            initScrollReveal('.D4', revealFromTopD4);
+            initScrollReveal('.D4', revealFromBottomD4);
          }
       }, []);
 
