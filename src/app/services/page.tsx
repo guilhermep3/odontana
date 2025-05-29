@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "../../components/footer"
 import { TitleSection } from "@/components/titleSection"
 import { AllServices } from "../(auth)/_servicesComponents/allservices"
-import ClientScrollReveal from "../(auth)/_components/clientScrollReveal"
+import { ClientScrollReveal } from "../(auth)/_components/clientScrollReveal"
 import { Suspense } from "react"
 import { Skeleton } from "@/components/skeleton"
 
