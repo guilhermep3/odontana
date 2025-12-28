@@ -10,36 +10,36 @@ import { useEffect, useState } from "react";
 import { Dentist } from "./dentist";
 
 export const SlideTeam = () => {
-   const [slidesPerView, setSlidesPerView] = useState(3);
-   const dentistData = useDentistData;
-   const dentistDataSlice = dentistData.slice(0, 5)
+  const [slidesPerView, setSlidesPerView] = useState(3);
+  const dentistData = useDentistData;
+  const dentistDataSlice = dentistData.slice(0, 5)
 
-   useEffect(() => {
-      function checkMobileWidth() {
-         window.innerWidth < 900 ? setSlidesPerView(1) : setSlidesPerView(3)
-      }
-      checkMobileWidth();
-      window.addEventListener('resize', checkMobileWidth)
-      return () => {
-         window.removeEventListener('resize', checkMobileWidth)
-      }
-   }, []);
+  useEffect(() => {
+    function checkMobileWidth() {
+      window.innerWidth < 900 ? setSlidesPerView(1) : setSlidesPerView(3)
+    }
+    checkMobileWidth();
+    window.addEventListener('resize', checkMobileWidth)
+    return () => {
+      window.removeEventListener('resize', checkMobileWidth)
+    }
+  }, []);
 
-   return (
-      <Swiper
-         modules={[Navigation, Pagination, Scrollbar, A11y]}
-         slidesPerView={slidesPerView}
-         pagination={{ clickable: true }}
-         navigation
-         spaceBetween={0}
-      >
-         {dentistDataSlice.map((item) => (
-            <SwiperSlide key={item.id}>
-               <div className="dentist-slide">
-                  <Dentist item={item}/>
-               </div>
-            </SwiperSlide>
-         ))}
-      </Swiper>
-   )
+  return (
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      slidesPerView={slidesPerView}
+      pagination={{ clickable: true }}
+      navigation
+      spaceBetween={0}
+    >
+      {dentistDataSlice.map((item) => (
+        <SwiperSlide key={item.id}>
+          <div className="dentist-slide">
+            <Dentist item={item} />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  )
 }

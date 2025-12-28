@@ -10,24 +10,24 @@ import { Skeleton } from "@/components/skeleton";
 
 const Page = () => {
 
-   return (
-      <Suspense fallback={<Skeleton/>}>
-         <main id="about">
-            <Header/>
-            <ClientScrollReveal>
-               <section className="hero-about">
-                  <TitleSection toCenter={true}
-                     title={<><span>SOBRE</span> NÓS</>}
-                     subtitle="Descubra mais sobre nossa clínica e equipe"
-                  />
-               </section>
-               <MoreAbout />
-               <Purpose/>
-               <FullTeam/>
-            </ClientScrollReveal>
-            <Footer/>
-         </main>
-      </Suspense>
-   )
+  return (
+    <Suspense fallback={<Skeleton />}>
+      <main id="about">
+        <Header />
+        <ClientScrollReveal>
+          <section className="hero-about">
+            <TitleSection toCenter={true}
+              title={<><span>SOBRE</span> NÓS</>}
+              subtitle="Descubra mais sobre nossa clínica e equipe"
+            />
+          </section>
+          <MoreAbout />
+          <Purpose />
+          <FullTeam />
+        </ClientScrollReveal>
+        <Footer />
+      </main>
+    </Suspense>
+  )
 }
 export default Page

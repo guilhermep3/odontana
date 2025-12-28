@@ -7,25 +7,25 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const poppins = Poppins({
-   weight: ['300', '400', '500', '600', '700'],
-   subsets: ['latin']
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
-   title: "Odontana",
-   description: "Clínica de odontologia",
+  title: "Odontana",
+  description: "Clínica de odontologia",
 };
 
 export default function RootLayout({
-   children,
+  children,
 }: Readonly<{
-   children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-   return (
-      <html lang="pt-BR">
-         <body className={`${poppins.className}`}>
-            {children}
-         </body>
-      </html>
-   );
+  return (
+    <html lang="pt-BR">
+      <body className={`${poppins.className}`}>
+        {children}
+      </body>
+    </html>
+  );
 }

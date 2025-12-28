@@ -16,25 +16,25 @@ import { Suspense } from "react";
 import { Skeleton } from "@/components/skeleton";
 
 export default function Home() {
-   return (
-      <Suspense fallback={<Skeleton/>}>
-         <main className="main">
-            <Header/>
-            <ClientScrollReveal>
-               <Hero/>
-               <Emphasis/>
-               <About/>
-               <Services/>
-               <Faixa/>
-               <Clinic/>
-               <Highlights/>
-               <Team/>
-               <Rating/>
-               <Local/>
-               <Footer/>
-            </ClientScrollReveal>
-            <GoTopButton/>
-         </main>
-      </Suspense>
-   );
+  return (
+    <Suspense fallback={<Skeleton />}>
+      <main className="main">
+        <Header />
+        <ClientScrollReveal>
+          <Hero />
+          <Emphasis />
+          <About />
+          <Services />
+          <Faixa />
+          <Clinic />
+          <Highlights />
+          <Team />
+          <Rating />
+          <Local />
+          <Footer />
+        </ClientScrollReveal>
+        <GoTopButton />
+      </main>
+    </Suspense>
+  );
 }

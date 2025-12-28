@@ -7,24 +7,24 @@ import { Suspense } from "react"
 
 const Page = () => {
 
-   return (
-      <Suspense fallback={<Skeleton/>}>
-         <main className="schedule-page">
-            <Header/>
-            <section className="hero-services">
-               <TitleSection toCenter={true}
-                  title={<>MARQUE SUA <span>CONSULTA</span></>}
-               />
-            </section>
-            <section className="form-section">
-               <div className="container-col">
-                  <h1>Preencha o formulário abaixo</h1>
-                  <Form/>
-               </div>
-            </section>
-            <Footer/>
-         </main>
-      </Suspense>
-   )
+  return (
+    <Suspense fallback={<Skeleton />}>
+      <main className="schedule-page">
+        <Header />
+        <section className="hero-services">
+          <TitleSection toCenter={true}
+            title={<>MARQUE SUA <span>CONSULTA</span></>}
+          />
+        </section>
+        <section className="form-section">
+          <div className="container-col">
+            <h1>Preencha o formulário abaixo</h1>
+            <Form />
+          </div>
+        </section>
+        <Footer />
+      </main>
+    </Suspense>
+  )
 }
 export default Page
