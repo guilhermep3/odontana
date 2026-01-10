@@ -1109,61 +1109,95 @@ footer{
   justify-content: center;
   align-items: center;
 }
-.moreabout-left, .moreabout-right{
+.moreabout {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f9fc 100%);
+  padding: 100px 0;
+}
+
+.moreabout .container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.moreabout-left {
   flex: 1;
 }
-.moreabout-left{
-  margin-right: 20px;
+.moreabout-left p {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #363636;
+  max-width: 520px;
 }
-.moreabout-left p{
-  line-height: 28px;
+.moreabout-left strong {
+  color: var(--blue3);
+  font-weight: 600;
 }
-.moreabout-right{
+.moreabout-right {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
 }
-.moreabout-img{
-  filter: drop-shadow(0px 0px 8px #043044);
-  margin: 10px;
+.moreabout-img img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  background: #fff;
+  filter: drop-shadow(4px 4px 10px #689);
 }
-.moreabout-img img{
-  width: 90%;
+#purpose {
+  background: linear-gradient(135deg, var(--blue1), #e9f6fb);
+  padding: 80px 0;
 }
-#purpose{
-  background-color: var(--blue1);
-}
-.purposes{
+.purposes {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 40px;
 }
-.purpose-svg{
-  width: 72px;
-  height: 72px;
-  stroke: var(--blue3);
-  fill: var(--blue3)
-}
-.purpose{
+.purpose {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   width: 320px;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 14px;
+  padding: 32px 24px;
+  border-radius: 20px;
+  background: #ffffff;
   text-align: center;
-  box-shadow: 0px 4px 12px #a5a5a588;
-  background-color: #ffffff;
-  transition: all 0.3s;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-.purpose:hover{
-  box-shadow: 0px 4px 12px #0430448c;
+.purpose:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(4, 48, 68, 0.25),
+    0 6px 12px rgba(4, 48, 68, 0.15);
+}
+.purpose-svg {
+  width: 72px;
+  height: 72px;
+  padding: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue1), var(--blue2));
+  fill: #ffffff;
+  stroke: #ffffff;
+  transition: transform 0.3s ease;
+}
+.purpose:hover .purpose-svg {
+  transform: rotate(-4deg) scale(1.1);
+}
+.purpose p {
+  color: #363636;
+  max-width: 260px;
 }
 .fullteam-div{
   display: grid;

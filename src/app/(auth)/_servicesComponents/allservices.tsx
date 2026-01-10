@@ -2,10 +2,10 @@
 import { Modal } from "@/components/modal";
 import { useServicesData } from "@/data/servicesData"
 import { serviceType } from "@/types/service";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export const AllServices = () => {
-  const servicesData = useServicesData;
   const [showModal, setShowModal] = useState<boolean>(false);
   const [modalItem, setModalItem] = useState<serviceType>();
 
@@ -18,7 +18,7 @@ export const AllServices = () => {
     <section id="allservices">
       <div className="container">
         <div className="services-list">
-          {servicesData.map((item) => (
+          {useServicesData.map((item) => (
             <div key={item.id} className="service"
               onClick={() => handleShowModal(item)}>
               <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
@@ -26,7 +26,7 @@ export const AllServices = () => {
               <div className="service-infos">
                 <p className="service-title">{item.name}</p>
                 <p className="service-desc">{item.description}</p>
-                <p className="read-more">Ver mais <img src="./svgs/arrow-sm-right-svgrepo-com.svg" alt="arrow right" /></p>
+                <p className="read-more">Ver mais <ArrowRight /></p>
               </div>
             </div>
           ))}
