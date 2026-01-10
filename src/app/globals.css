@@ -1144,8 +1144,6 @@ footer{
   width: 100%;
   max-width: 420px;
   border-radius: 18px;
-  background: #fff;
-  filter: drop-shadow(4px 4px 10px #689);
 }
 #purpose {
   background: linear-gradient(135deg, var(--blue1), #e9f6fb);
