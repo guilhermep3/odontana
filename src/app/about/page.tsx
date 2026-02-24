@@ -1,10 +1,10 @@
 import { Header } from "@/components/header"
 import { Footer } from "../../components/footer"
 import { TitleSection } from "@/components/titleSection"
-import { MoreAbout } from "../(auth)/_aboutComponents/moreabout"
-import { Purpose } from "../(auth)/_aboutComponents/purpose";
-import { FullTeam } from "../(auth)/_aboutComponents/fullTeam";
-import { ClientScrollReveal } from "../(auth)/_components/clientScrollReveal";
+import { MoreAbout } from "../../components/sections/about/moreabout"
+import { Purpose } from "../../components/sections/about/purpose";
+import { FullTeam } from "../../components/sections/about/fullTeam";
+import { ClientScrollReveal } from "../../components/sections/clientScrollReveal";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/skeleton";
 

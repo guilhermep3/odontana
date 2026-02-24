@@ -1,5 +1,4 @@
 import { TitleSection } from "@/components/titleSection";
-import { Cpu } from "lucide-react";
 
 export const Purpose = () => {
 

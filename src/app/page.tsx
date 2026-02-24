@@ -1,21 +1,22 @@
 import { Header } from "@/components/header";
-import { Hero } from "./(auth)/_components/hero";
-import { Emphasis } from "./(auth)/_components/emphasis";
-import { About } from "./(auth)/_components/about";
-import { Services } from "./(auth)/_components/services";
-import { Faixa } from "./(auth)/_components/faixa";
-import { Clinic } from "./(auth)/_components/clinic";
+import { Hero } from "../components/sections/hero";
+import { Emphasis } from "../components/sections/emphasis";
+import { About } from "../components/sections/about";
+import { Services } from "../components/sections/services";
+import { Faixa } from "../components/sections/faixa";
+import { Clinic } from "../components/sections/clinic";
 import { GoTopButton } from "@/components/GoTopButton";
-import { Highlights } from "./(auth)/_components/highlights";
-import { Team } from "./(auth)/_components/team"
-import { Rating } from "./(auth)/_components/rating";
-import { Local } from "./(auth)/_components/local";
+import { Highlights } from "../components/sections/highlights";
+import { Team } from "../components/sections/team"
+import { Rating } from "../components/sections/rating";
+import { Local } from "../components/sections/local";
 import { Footer } from "../components/footer";
-import { ClientScrollReveal } from "./(auth)/_components/clientScrollReveal";
+import { ClientScrollReveal } from "../components/sections/clientScrollReveal";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/skeleton";
 
 export default function Home() {
+
   return (
     <Suspense fallback={<Skeleton />}>
       <main className="main">
