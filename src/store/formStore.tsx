@@ -1,9 +1,9 @@
-import { formData } from "@/components/form";
+import { FormData } from "@/components/form";
 import { create } from "zustand";
 
 interface FormState {
-  formData: formData | null;
-  setFormData: (data: formData) => void;
+  formData: FormData | null;
+  setFormData: (data: FormData) => void;
   clearFormData: () => void;
 };
 

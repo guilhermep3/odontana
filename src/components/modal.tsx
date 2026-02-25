@@ -16,7 +16,7 @@ export const Modal = ({ infos, setShowModal }: props) => {
 
   function handleGoSchedule() {
     const serviceFormatted = infos.name.toLocaleLowerCase().replace(/\s+/g, '');
-    router.push(`/schedule?service=${serviceFormatted}`);
+    router.push(`/agendar?service=${serviceFormatted}`);
   }
 
   return (

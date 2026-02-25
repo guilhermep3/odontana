@@ -38,9 +38,9 @@ export const MobileNavbar = () => {
             <a href="#local">Local</a>
           </div>
         </li>
-        <li><a href="about">Sobre</a></li>
-        <li><a href="services">Serviços</a></li>
-        <li><a href="schedule">Agendar</a></li>
+        <li><a href="sobre">Sobre</a></li>
+        <li><a href="servicos">Serviços</a></li>
+        <li><a href="agendar">Agendar</a></li>
       </nav>
     </>
   )

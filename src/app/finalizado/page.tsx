@@ -2,7 +2,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Skeleton } from "@/components/skeleton";
-import { TitleSection } from "@/components/titleSection";
 import { useFormStore } from "@/store/formStore";
 import Link from "next/link";
 import { Suspense } from "react";

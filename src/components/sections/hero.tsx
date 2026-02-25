@@ -13,7 +13,7 @@ export const Hero = () => {
           <h2 data-aos="zoom-in" className="hero-subtitle">
             A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.
           </h2>
-          <Button text="Agendar" href="/schedule" dataAos="fade-up" />
+          <Button text="Agendar" href="/agendar" dataAos="fade-up" />
           <div data-aos="fade-up" className="hero-rating">
             <div className="hero-rating-top">
               <p>Avaliação Google</p>
