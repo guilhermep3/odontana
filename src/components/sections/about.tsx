@@ -11,12 +11,18 @@ export const About = () => {
           <img data-aos="fade-down" src="./about/about-2.jpg" alt="clinica odontologica" className="about-img2" />
         </div>
         <div className="about-left">
-          <h2 data-aos="fade-down" className="section-id reveal-right"><img src="./svgs/star-2.svg" alt="star" className="star2" />Sobre nós</h2>
+          <h2 data-aos="fade-down" className="section-id reveal-right">
+            <img src="./svgs/star-2.svg" alt="star" className="star2" />
+            Sobre nós
+          </h2>
           <h1 data-aos="fade-down" className="section-title reveal-right">
             Sua jornada para o <span>sorriso perfeito</span> começa aqui
           </h1>
-          <p data-aos="fade-up" className="section-desc reveal-right">O objetivo de nossa clínica é fornecer odontologia amigável e atenciosa e o mais alto nível de tratamentos odontológicos gerais,
-            cosméticos e especializados. Com consultórios odontológicos em todo o mundo.</p>
+          <p data-aos="fade-up" className="section-desc reveal-right">
+            O objetivo de nossa clínica é fornecer odontologia amigável e atenciosa e o mais alto nível
+            de tratamentos odontológicos gerais, cosméticos e especializados. Com consultórios
+            odontológicos em todo o mundo.
+          </p>
           <ul className="about-list">
             <li data-aos="fade-left" className="about-list-item">
               <BadgeCheck />

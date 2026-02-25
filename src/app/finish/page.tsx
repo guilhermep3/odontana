@@ -16,11 +16,16 @@ const Page = () => {
         <Header />
         {formData ? (
           <div className="container-col">
-            <h1 className="finish-title">Parabéns, {formData.name}!</h1>
+            <h1 className="finish-title">
+              Parabéns, {formData.name}!
+            </h1>
             <div className="finish-div">
               <div className="finish-left">
                 <p>Você finalizou o processo de marcar uma consulta com a <strong>Odontana</strong>.</p>
-                <p>Em breve, entraremos em contato pelo número <strong>{formData?.number}</strong> para confirmar o seu agendamento.</p>
+                <p>
+                  Em breve, entraremos em contato pelo número <strong>{formData?.number}</strong>{' '}
+                  para confirmar o seu agendamento.
+                </p>
                 <p>Agradecemos pela sua confiança!</p>
                 <Link href="/" className="back-home-btn">Voltar para a página inicial</Link>
               </div>

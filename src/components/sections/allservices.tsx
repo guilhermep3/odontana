@@ -21,7 +21,9 @@ export const AllServices = () => {
           {useServicesData.map((item) => (
             <div key={item.id} className="service"
               onClick={() => handleShowModal(item)}>
-              <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica" className="service-img" />
+              <img src={`./services/${item.img}`} alt="pessoa em uma consulta odontológica"
+                className="service-img"
+              />
               <img src={`./svgs/${item.icon}`} className="service-icon" alt={item.icon} />
               <div className="service-infos">
                 <p className="service-title">{item.name}</p>

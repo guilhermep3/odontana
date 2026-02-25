@@ -22,8 +22,12 @@ export const Services = () => {
   return (
     <section id="services">
       <div className="container">
-        <TitleSection secId="Serviços" title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={true} />
-        <p data-aos="zoom-in" className="section-desc">Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.</p>
+        <TitleSection secId="Serviços"
+          title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={true}
+        />
+        <p data-aos="zoom-in" className="section-desc">
+          Estamos comprometidos com a sustentabilidade. iniciativas ecológicas.
+        </p>
         <div className="services-list">
           {servicesDataSlice.map((item) => (
             <div key={item.id} data-aos="fade-up"
@@ -44,7 +48,9 @@ export const Services = () => {
         </div>
         <Button href="/services" text="Ver todos" dataAos="zoom-in" />
       </div>
-      {showModal && modalItem && <Modal infos={modalItem} setShowModal={() => setShowModal(!showModal)} />}
+      {showModal && modalItem && (
+        <Modal infos={modalItem} setShowModal={() => setShowModal(!showModal)} />
+      )}
     </section>
   )
 }

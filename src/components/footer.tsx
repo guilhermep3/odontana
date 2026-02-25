@@ -61,8 +61,13 @@ export const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p className="footer-copyright">© Copyright todos os direitos reservados</p>
-        <p className="footer-developed">Desenvolvido por <a href="https://github.com/guilhermep3/dentista-website" target="_blank">Guilherme Pereira</a></p>
+        <p className="footer-copyright">
+          © Copyright todos os direitos reservados
+        </p>
+        <p className="footer-developed">
+          Desenvolvido por{' '}
+          <a href="https://github.com/guilhermep3/dentista-website" target="_blank">Guilherme Pereira</a>
+        </p>
       </div>
     </footer>
   )

@@ -7,18 +7,20 @@ export const Hero = () => {
     <section id="hero">
       <div className="container">
         <div className="hero-left">
-          <h1 data-aos="zoom-in" className="hero-title">Experimente a <span>Excelência Odontológica</span> com um toque suave</h1>
-          <h2 data-aos="zoom-in" className="hero-subtitle">A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.</h2>
+          <h1 data-aos="zoom-in" className="hero-title">
+            Experimente a <span>Excelência Odontológica</span> com um toque suave
+          </h1>
+          <h2 data-aos="zoom-in" className="hero-subtitle">
+            A clínica com a melhor equipe e estrutura pronta para te atender com muito carinho e atenção.
+          </h2>
           <Button text="Agendar" href="/schedule" dataAos="fade-up" />
           <div data-aos="fade-up" className="hero-rating">
             <div className="hero-rating-top">
               <p>Avaliação Google</p>
               <span>5.0</span>
-              <Star className="star-rating" />
-              <Star className="star-rating" />
-              <Star className="star-rating" />
-              <Star className="star-rating" />
-              <Star className="star-rating" />
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Star className="star-rating" />
+              ))}
             </div>
             <p>Baseado em 480 avaliações</p>
           </div>

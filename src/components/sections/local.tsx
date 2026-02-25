@@ -19,7 +19,7 @@ export const Local = () => {
             </li>
             <li data-aos="fade-up">
               <Phone />
-              <p>(11) 9999-9999</p>
+              <p>(11) 99999-9999</p>
             </li>
             <li data-aos="fade-up">
               <Mail />
@@ -27,7 +27,7 @@ export const Local = () => {
             </li>
             <li data-aos="fade-up">
               <Clock />
-              <p>Seg a Sex: 07: 22:00</p>
+              <p>Seg a Sex: 07:00 22:00</p>
             </li>
           </ul>
         </div>
