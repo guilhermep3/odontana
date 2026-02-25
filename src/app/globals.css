@@ -8,7 +8,17 @@
   --blue2: #85d4e7;
   --blue3: #23adcf;
   --blue4: #043044;
-  --yellow: #dab200:
+  --yellow: #dab200;
+  --gray-50: #f8f8f8;
+  --gray-100: #f0f0f0;
+  --gray-200: #e4e4e4;
+  --gray-300: #d1d1d1;
+  --gray-400: #b4b4b4;
+  --gray-500: #9e9e9e;
+  --gray-600: #7a7a7a;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
 }
 *{
   margin: 0;
@@ -103,8 +113,8 @@ body {
 }
 .star{
   width: 20px;
-  stroke: #dab200;
-  fill: #dab200;
+  stroke: var(--yellow);
+  fill: var(--yellow);
   margin-right: 4px;
 }
 
@@ -397,8 +407,8 @@ body {
 .star-rating{
   width: 20px;
   height: 20px;
-  fill: #dab200;
-  stroke: #dab200;
+  fill: var(--yellow);
+  stroke: var(--yellow);
 }
 .hero-image{
   width: 500px;
@@ -411,7 +421,7 @@ body {
   padding: 10px;
   width: fit-content;
   background-color: #ffffff;
-  box-shadow: 0px 2px 5px #dbdbdb;
+  box-shadow: 0px 2px 5px var(--gray-400);
   border-radius: 12px;
   animation: moveDentistBox 3s infinite linear;
 }
@@ -428,7 +438,7 @@ body {
 }
 .dentist-box img{
   width: 80px;
-  background-color: #dbdbdb;
+  background-color: var(--gray-300);
 }
 .dentist-box-name{
   font-weight: bold;
@@ -443,7 +453,7 @@ body {
   position: absolute;
   padding: 16px;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px #dbdbdb;
+  box-shadow: 0px 0px 10px var(--gray-300);
   background-color: #ffffff;
   overflow: hidden;
   animation: moveIcon 3s infinite linear;
@@ -592,7 +602,7 @@ body {
   max-width: 320px;
   border-radius: 20px;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   border: 1px solid rgba(0, 0, 0, 0.2);
   transition: all 0.35s ease;
@@ -636,7 +646,7 @@ body {
 .service-desc{
   font-size: 15px;
   line-height: 1.5;
-  color: #555;
+  color: var(--gray-700);
   margin-bottom: 12px;
 }
 .services-list{
@@ -837,7 +847,7 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 40px;
-  background-color: #dbdbdb;
+  background-color: var(--gray-300);
   width: 330px;
   position: relative;
   overflow: hidden;
@@ -911,7 +921,6 @@ body {
 }
 
 
-
 .ratings{
   width: 100%;
   margin: 0 auto;
@@ -939,7 +948,7 @@ body {
 .rating-star-div span{
   font-size: 18px;
   font-weight: bold;
-  color: #dab200;
+  color: var(--yellow);
 }
 .rating-name{
   font-size: 18px;
@@ -1205,8 +1214,9 @@ footer{
   gap: 56px;
 }
 
+
 .form-section {
-  background-color: #f0f0f0;
+  background-color: var(--gray-50);
   font-family: 'DM Sans', sans-serif;
 }
 .form-section h1 {
@@ -1220,7 +1230,7 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--gray-300);
   width: 100%;
   max-width: 720px;
   padding: 24px;
@@ -1239,7 +1249,7 @@ footer{
   margin: 8px 10px;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a2e;
+  color: var(--gray-900);
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
@@ -1248,10 +1258,10 @@ footer{
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   padding: 11px 14px;
-  border: 1.5px solid #e8e6e1;
-  background-color: #f5f5f5;
+  border: 1.5px solid var(--gray-200);
+  background-color: var(--gray-50);
   border-radius: 10px;
-  color: #1a1a2e;
+  color: var(--gray-900);
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
@@ -1277,32 +1287,32 @@ footer{
   transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
   box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
 }
-
 .form input[type="submit"]:hover {
   background-color: var(--blue3);
-  box-shadow: 0 6px 20px rgba(59, 107, 250, 0.3);
+  box-shadow: 0 6px 20px rgba(59, 107, 250, 0.4);
   transform: translateY(-1px);
 }
 .form input[type="submit"]:active {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(59, 107, 250, 0.2);
 }
+
 .error-input{
   font-size: 13px;
   color: #990000;
   padding: 2px;
 }
+
 .services-fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: calc(100% - 20px);
-  border: 2px solid #e8e6e1;
+  border: 2px solid var(--gray-200);
   border-radius: 12px;
   padding: 16px 20px;
-  background-color: #f5f5f5;
+  background-color: var(--gray-50);
   margin: 8px 10px;
 }
-
 .services-fieldset legend {
   font-size: 13px;
   font-weight: 600;
@@ -1311,7 +1321,6 @@ footer{
   text-transform: uppercase;
   padding: 0 6px;
 }
-
 .services-fieldset label {
   display: flex;
   flex-direction: row;
@@ -1325,7 +1334,6 @@ footer{
   text-transform: none;
   letter-spacing: 0;
 }
-
 .service-input {
   width: 20px !important;
   height: 20px;
@@ -1399,7 +1407,7 @@ footer{
   border-radius: 40px;
 }
 .modal-right-top{
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid var(--gray-400);
 }
 .modal-title{
   font-size: 24px;
@@ -1451,7 +1459,7 @@ footer{
 .close-btn{
   font-size: 15px;
   padding: 8px 12px;
-  background-color: #dbdbdb;
+  background-color: var(--gray-300);
   border: none;
   border-radius: 8px;
   cursor: pointer;
