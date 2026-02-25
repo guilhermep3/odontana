@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600&display=swap');
+
 :root {
   --font-poppins: var(--poppins);
   --background: #ffffff;
@@ -1197,23 +1199,23 @@ footer{
   color: #363636;
   max-width: 260px;
 }
-.fullteam-div{
+.fullteam-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 56px;
 }
 
-
-.form-section{
+.form-section {
   background-color: #f0f0f0;
+  font-family: 'DM Sans', sans-serif;
 }
-.form-section h1{
+.form-section h1 {
   text-align: center;
   font-size: 24px;
   color: var(--blue4);
   margin-bottom: 32px;
 }
-.form{
+.form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1225,67 +1227,111 @@ footer{
   border-radius: 16px;
   background-color: #ffffff;
 }
-.form-div{
+.form-div {
   display: flex;
   width: 100%;
 }
-.form-div label{
+.form-div label {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   flex: 1;
-  margin: 12px;
+  margin: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
-.form-div input, .form-div select{
+.form-div input, .form-div select {
   width: 100%;
-  font-size: 16px;
-  padding: 10px;
-  border: 1px solid #cfcfcf;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  padding: 11px 14px;
+  border: 1.5px solid #e8e6e1;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+.form-div input:focus,
+.form-div select:focus {
+  border-color: var(--blue3);
   background-color: #ffffff;
-  border-radius: 8px;
+  box-shadow: 0 0 0 3px rgba(59, 107, 250, 0.1);
 }
-.form input[type="submit"]{
-  width: 100%;
-  padding: 12px;
-  background-color: var(--blue3);
-  font-size: 18px;
+.form input[type="submit"] {
+  width: calc(100% - 20px);
+  margin: 16px 10px 4px;
+  padding: 14px;
+  background-color: var(--blue4);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   border-radius: 12px;
   color: #ffffff;
-  margin-top: 8px;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(26, 26, 46, 0.2);
 }
-.form input[type="submit"]:hover{
-  filter: brightness(0.9);
+
+.form input[type="submit"]:hover {
+  background-color: var(--blue3);
+  box-shadow: 0 6px 20px rgba(59, 107, 250, 0.3);
+  transform: translateY(-1px);
+}
+.form input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(59, 107, 250, 0.2);
 }
 .error-input{
   font-size: 13px;
   color: #990000;
   padding: 2px;
 }
-.services-fieldset{
+.services-fieldset {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  padding: 12px;
-  margin: 20px 0;
-  border: 2px solid #dbdbdb;
-  border-radius: 8px;
-  background-color: #ffffff;
-  width: 100%;
-  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  width: calc(100% - 20px);
+  border: 2px solid #e8e6e1;
+  border-radius: 12px;
+  padding: 16px 20px;
+  background-color: #f5f5f5;
+  margin: 8px 10px;
 }
-.services-fieldset label{
+
+.services-fieldset legend {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 0 6px;
+}
+
+.services-fieldset label {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a2e;
   cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
 }
+
 .service-input {
-  width: 16px;
-  height: 16px;
+  width: 20px !important;
+  height: 20px;
+  accent-color: var(--blue2);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 .modal-container{
   position: fixed;
@@ -1776,9 +1822,6 @@ footer{
   .modal-image {
     width: 90%;
     height: 90%;
-  }
-  .services-fieldset{
-    grid-template-columns: repeat(2, 1fr);
   }
   .steps-list li{
     gap: 8px;
