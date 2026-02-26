@@ -16,7 +16,9 @@ const Page = () => {
         {formData ? (
           <div className="container-col">
             <h1 className="finish-title">
+              <img src="./svgs/star-2.svg" alt="star" className="star2" />
               Parabéns, {formData.name}!
+              <img src="./svgs/star-2.svg" alt="star" className="star2" />
             </h1>
             <div className="finish-div">
               <div className="finish-left">
