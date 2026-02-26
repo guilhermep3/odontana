@@ -1,34 +1,36 @@
 "use client"
 import { sectionsData } from "@/data/sectionsData"
 import { ChevronDown } from "lucide-react"
-import { useRef } from "react"
+import { useState } from "react"
 
 export const MobileNavbar = () => {
-  const navbar = useRef<HTMLDivElement>(null)
-  const dropdownmobile = useRef<HTMLDivElement>(null);
+  const [showMobileNav, setShowMobileNav] = useState(false)
+  const [showDropdown, setShowDropdown] = useState(false)
 
   function handleShowMobileNav() {
-    navbar.current?.classList.toggle('navbar-active');
-    document.querySelector('.navbar-btn')?.classList.toggle('navbar-btn-active');
+    setShowMobileNav(prev => !prev)
   }
+
   function handleShowDropdown() {
-    dropdownmobile.current?.classList.toggle('show-dropdown-mobile')
+    setShowDropdown(prev => !prev)
   }
 
   return (
     <>
-      <div className="navbar-btn" onClick={handleShowMobileNav}>
+      <div className={`navbar-btn ${showMobileNav ? "navbar-btn-active" : ""}`}
+        onClick={handleShowMobileNav}
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <nav ref={navbar} className="navbar-mobile">
+      <nav className={`navbar-mobile ${showMobileNav ? "navbar-active" : ""}`}>
         <li className="li-dropdown">
           <div className="li-dropdown-home" onClick={handleShowDropdown}>
             <a href="/" className="home">Início</a>
             <ChevronDown className="arrow-down" />
           </div>
-          <div ref={dropdownmobile} className="dropdown-mobile">
+          <div className={`dropdown-mobile ${showDropdown ? "show-dropdown-mobile" : ""}`}>
             {sectionsData.map((item, index) => (
               <li key={index}>
                 <a href={item.href}>{item.title}</a>

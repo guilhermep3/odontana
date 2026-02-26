@@ -31,7 +31,7 @@ export const RatingSlide = () => {
       spaceBetween={0}
     >
       {ratingData.map((item) => (
-        <SwiperSlide key={item.id} >
+        <SwiperSlide key={item.id}>
           <div className="rating">
             <Quote className="quote" />
             <p className="rating-text">"{item.assessment}"</p>

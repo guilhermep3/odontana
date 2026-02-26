@@ -19,7 +19,7 @@ export const Hero = () => {
               <p>Avaliação Google</p>
               <span>5.0</span>
               {Array.from({ length: 5 }).map((_, index) => (
-                <Star className="star-rating" />
+                <Star key={index} className="star-rating" />
               ))}
             </div>
             <p>Baseado em 480 avaliações</p>
