@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --font-poppins: var(--poppins);
   --background: #ffffff;
   --foreground: #171717;
   --blue1: #ebf6ff;
@@ -33,7 +32,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-poppins) sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -1218,7 +1217,6 @@ footer{
 
 .form-section {
   background-color: var(--gray-50);
-  font-family: 'DM Sans', sans-serif;
 }
 .form-section h1 {
   text-align: center;
@@ -1256,7 +1254,6 @@ footer{
 }
 .form-div input, .form-div select {
   width: 100%;
-  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   padding: 11px 14px;
   border: 1.5px solid var(--gray-200);
@@ -1277,7 +1274,6 @@ footer{
   margin: 16px 10px 4px;
   padding: 14px;
   background-color: var(--blue4);
-  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   border: none;
@@ -1470,7 +1466,6 @@ footer{
   display: flex;
   flex-direction: column;
   background-color: var(--gray-50);
-  font-family: 'DM Sans', sans-serif;
 }
 .finish-title {
   font-family: 'DM Sans', serif;
@@ -1551,7 +1546,6 @@ footer{
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 600;
   padding: 12px 24px;

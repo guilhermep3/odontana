@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-const poppins = Poppins({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin']
-});
 
 export const metadata: Metadata = {
   title: "Odontana",
@@ -23,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${poppins.className}`}>
+      <body className={``}>
         {children}
       </body>
     </html>

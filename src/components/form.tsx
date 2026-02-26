@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { useFormStore } from "@/store/formStore";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useServicesData } from "@/data/servicesData";
 
 const scheduleSchema = z.object({
@@ -26,7 +26,7 @@ const scheduleSchema = z.object({
   genre: z.enum(["Masculino", "Feminino", "Outro"]),
   cpf: z.string().min(11, 'CPF deve ter 11 números').refine(validarCPF, { message: 'CPF inválido' }),
   number: z.string().min(9, 'Preencha o campo corretamente'),
-  service: z.array(z.string()).min(1, 'Selecione pelo menos uma opção'),
+  services: z.array(z.string()).min(1, 'Selecione pelo menos uma opção'),
 })
 
 export type FormData = z.infer<typeof scheduleSchema>
@@ -37,7 +37,7 @@ export const Form = () => {
   } = useForm<FormData>({
     resolver: zodResolver(scheduleSchema),
     defaultValues: {
-      service: [],
+      services: [],
     },
   });
   const { setFormData } = useFormStore();
@@ -45,7 +45,7 @@ export const Form = () => {
   const searchParams = useSearchParams();
 
   const selectedServiceParam = searchParams.get("service");
-  const selectedServices = watch("service") ?? [];
+  const selectedServices = watch("services") ?? [];
   const normalize = (value: string) =>
     value.toLowerCase().replace(/\s+/g, "");
 
@@ -59,10 +59,10 @@ export const Form = () => {
       );
 
     if (matchedService) {
-      const current = watch("service") ?? [];
+      const current = watch("services") ?? [];
 
       setValue(
-        "service",
+        "services",
         [...new Set([...current, matchedService])],
         { shouldValidate: true }
       );
@@ -74,7 +74,7 @@ export const Form = () => {
       ? selectedServices.filter(s => s !== service)
       : [...selectedServices, service];
 
-    setValue("service", updated, { shouldValidate: true });
+    setValue("services", updated, { shouldValidate: true });
   }
 
   const onSubmit = (data: FormData) => {
@@ -128,7 +128,7 @@ export const Form = () => {
           {useServicesData.map(service => (
             <label key={service.id}>
               <input type="checkbox" className="service-input"
-                {...register("service")}
+                {...register("services")}
                 value={service.name}
                 checked={selectedServices?.includes(service.name)}
                 onChange={() => handleChangeCheckbox(service.name)}
@@ -136,7 +136,7 @@ export const Form = () => {
               {service.name}
             </label>
           ))}
-          {errors.service && <span className="error-input">{errors.service.message}</span>}
+          {errors.services && <span className="error-input">{errors.services.message}</span>}
         </fieldset>
       </div>
       <input type="submit" value="Marcar consulta" />
