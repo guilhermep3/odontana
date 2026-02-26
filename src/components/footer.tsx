@@ -1,3 +1,4 @@
+import { sectionsData } from "@/data/sectionsData"
 import { Facebook, Instagram, Mail, Music2, Phone, Twitter } from "lucide-react"
 
 export const Footer = () => {
@@ -15,14 +16,11 @@ export const Footer = () => {
         <div className="footer-div">
           <h1>Links</h1>
           <ul>
-            <li><a href="#hero">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#clinic">Clínica</a></li>
-            <li><a href="#highlights">Diferenciais</a></li>
-            <li><a href="#team">Time</a></li>
-            <li><a href="#rating">Avaliações</a></li>
-            <li><a href="#local">Local</a></li>
+            {sectionsData.map((item, index) => (
+              <li key={index}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="footer-div">

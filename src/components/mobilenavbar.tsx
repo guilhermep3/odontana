@@ -1,4 +1,5 @@
 "use client"
+import { sectionsData } from "@/data/sectionsData"
 import { ChevronDown } from "lucide-react"
 import { useRef } from "react"
 
@@ -28,14 +29,11 @@ export const MobileNavbar = () => {
             <ChevronDown className="arrow-down" />
           </div>
           <div ref={dropdownmobile} className="dropdown-mobile">
-            <a href="#hero">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#services">Serviços</a>
-            <a href="#clinic">Clínica</a>
-            <a href="#highlights">Diferenciais</a>
-            <a href="#team">Time</a>
-            <a href="#rating">Avaliações</a>
-            <a href="#local">Local</a>
+            {sectionsData.map((item, index) => (
+              <li key={index}>
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))}
           </div>
         </li>
         <li><a href="sobre">Sobre</a></li>

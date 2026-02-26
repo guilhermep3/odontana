@@ -42,7 +42,7 @@ body {
 .container, .container-col{
   max-width: 1300px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 64px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +62,7 @@ body {
 .section-title{
   font-size: 40px;
   color: var(--blue4);
-  margin-bottom: 28px;
+  margin: 0px 8px 28px 8px;
 }
 .section-title span{
   color: var(--blue3);
@@ -193,10 +193,13 @@ body {
   border-radius: 8px;
   background-color: var(--blue4);
 }
-.dropdown a {
+.dropdown li {
   font-size: 15px;
   color: #ffffff;
-  margin: 4px;
+  margin: 6px;
+}
+.dropdown a {
+  color: #ffffff;
 }
 .li-dropdown:hover .home {
   color: var(--blue3);
@@ -705,20 +708,20 @@ body {
   font-weight: 500;
   color: #ffffff;
 }
-.local-image{
-  background-image: url('../../public/clinic-bg.jpg');
+.local-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 560px;
+  height: 600px;
   border-radius: 40px;
   overflow: hidden;
 }
 .local-image h1{
   font-size: 40px;
   color: #ffffff;
+  max-width: 80%;
 }
 .local-image h2{
   font-size: 16px;
@@ -1009,103 +1012,136 @@ body {
   filter: saturate(1);
 }
 
-
+/* FOOTER */
 footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  padding: 40px;
-
-  background-color: var(--blue4);
+  gap: 32px;
+  padding: 60px 40px 30px 40px;
+  background: linear-gradient(180deg, var(--blue4) 0%, #041d29 100%);
 }
 .footer-top{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 48px;
   max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #ffffff24;
-  padding-bottom: 24px;
+  border-bottom: 1px solid #ffffff1f;
+  padding-bottom: 32px;
 }
 .footer-message{
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
-.footer-message .logo-div div {
+.footer-message .logo-div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-message .logo-div div{
   color: var(--blue2);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 .footer-message p{
-  color: #ffffff;
+  color: #ffffffcc;
   font-size: 14px;
+  line-height: 1.6;
+  max-width: 320px;
 }
 .footer-div{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 .footer-div h1{
-  font-size: 20px;
+  font-size: 18px;
   color: var(--blue2);
+  font-weight: 600;
+  margin-bottom: 6px;
+  position: relative;
 }
-.footer-div ul li a{
+.footer-div h1::after{
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: var(--blue2);
+  display: block;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+.footer-div ul li a, .footer-div ul li p{
   display: inline-block;
   font-size: 14px;
-  margin-bottom: 8px;
-  color: #ffffff;
+  margin-bottom: 6px;
+  color: #ffffffcc;
   text-decoration: none;
+  transition: all 0.25s ease;
 }
-.footer-div ul li a:hover{
-  text-decoration: underline;
+.footer-div ul li a:hover, .footer-div ul li p:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+.footer-ul-svg li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.footer-ul-svg p{
+  color: #ffffffcc;
+  font-size: 14px;
+}
+.footer-ul-svg svg, .footer-div svg{
+  width: 20px;
+  stroke: #ffffff;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+.footer-ul-svg li:hover svg{
+  opacity: 1;
+  transform: scale(1.1);
+}
+.footer-div p{
+  color: #ffffffcc;
 }
 .footer-bottom{
   text-align: center;
 }
 .footer-copyright{
   font-size: 13px;
-  color: #ffffff;
+  color: #ffffffb3;
   margin-bottom: 6px;
 }
 .footer-developed{
   font-size: 12px;
-  color: #ffffff;
+  color: #ffffffb3;
 }
 .footer-developed a{
   color: #ffffff;
   text-decoration: none;
   position: relative;
+  font-weight: 500;
 }
 .footer-developed a::after{
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -2px;
   width: 0%;
-  height: 1scpx;
+  height: 1px;
   background-color: #ffffff;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
+
 .footer-developed a:hover::after{
   width: 100%;
   left: 0%;
-}
-.footer-ul-svg li{
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.footer-ul-svg p{
-  color: #ffffff;
-  font-size: 14px;
-}
-.footer-ul-svg svg, .footer-div svg{
-  width: 20px;
-  stroke: #ffffff;
-}
-.footer-div p{
-  color: #ffffff;
 }
 
 
@@ -1306,12 +1342,12 @@ footer{
   width: calc(100% - 20px);
   border: 2px solid var(--gray-200);
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: 16px;
   background-color: var(--gray-50);
   margin: 8px 10px;
 }
 .services-fieldset legend {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--foreground);
   letter-spacing: 0.3px;
@@ -1322,7 +1358,7 @@ footer{
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin: 8px 0;
   font-size: 16px;
   font-weight: 500;
@@ -1604,9 +1640,6 @@ footer{
   .services-list{
     grid-template-columns: repeat(2, 1fr);
   }
-  .services-fieldset{
-    grid-template-columns: repeat(3, 1fr);
-  }
   .modal{
     flex-direction: column;
     width: 75%;
@@ -1747,6 +1780,7 @@ footer{
   .section-title, .local-image h1 {
     font-size: 32px;
     text-align: center;
+    max-width: 100%;
   }
   .section-desc {
     font-size: 14px;
@@ -1879,6 +1913,9 @@ footer{
   .form-div label {
     font-size: 14px;
     margin: 8px;
+  }
+  .services-fieldset {
+    padding: 8px;
   }
   .modal{
     width: 95%;

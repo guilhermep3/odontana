@@ -1,4 +1,4 @@
-export const useClinicData = [
+export const clinicData = [
    {
       id: 1,
       span: '+10',

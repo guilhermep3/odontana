@@ -1,12 +1,14 @@
-import { useClinicData } from "@/data/localData"
+import { clinicData } from "@/data/localData"
 
 export const Clinic = () => {
-  const clinicdata = useClinicData;
+  const clinicdata = clinicData;
 
   return (
     <section id="clinic">
       <div className="container-col">
-        <div className="local-image">
+        <div className="local-image"
+          style={{ backgroundImage: "url('/clinic-bg.jpg')" }}
+        >
           <div className="local-blue-bg">
             <h2 data-aos="zoom-in">
               <img src="./svgs/star-2.svg" alt="star" className="star2" />

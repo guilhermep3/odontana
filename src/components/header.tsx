@@ -2,6 +2,7 @@ import { ChevronDown } from "lucide-react"
 import { Button } from "./button"
 import { MobileNavbar } from "./mobilenavbar"
 import Link from "next/link"
+import { sectionsData } from "@/data/sectionsData"
 
 export const Header = () => {
 
@@ -18,14 +19,11 @@ export const Header = () => {
               <a href="/" className="home">Início</a>
               <ChevronDown className="arrow-down" />
               <div className="dropdown">
-                <a href="#hero">Início</a>
-                <a href="#about">Sobre</a>
-                <a href="#services">Serviços</a>
-                <a href="#clinic">Clínica</a>
-                <a href="#highlights">Diferenciais</a>
-                <a href="#team">Time</a>
-                <a href="#rating">Avaliações</a>
-                <a href="#local">Local</a>
+                {sectionsData.map((item, index) => (
+                  <li key={index}>
+                    <a href={item.href}>{item.title}</a>
+                  </li>
+                ))}
               </div>
             </li>
             <li><a href="sobre">Sobre</a></li>
