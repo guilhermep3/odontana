@@ -562,7 +562,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  background-color: #ff000024;
+  background-color: #ffffff1f;
   z-index: 100;
   transition: all 0.7s linear;
 }
@@ -748,8 +748,8 @@ body {
 }
 .local-box {
   width: 300px;
-  margin: 10px;
-  padding-bottom: 10px;
+  margin: 12px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--blue2);
 }
 .local-box span{
@@ -765,10 +765,15 @@ body {
 }
 .local-box-desc{
   font-size: 16px;
-  color: #000000b7;
   margin-top: 20px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: var(--gray-800);
 }
 
+#highlights{
+  background-color: var(--gray-50);
+}
 .highlights-left{
   width: 55%;
 }
@@ -791,28 +796,33 @@ body {
 .highlights-text{
   margin-top: 24px;
   margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: var(--gray-800);
 }
 .highlight-list{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 .highlight-box{
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--blue2);
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px var(--blue1);
+  background-color: var(--background);
 }
 .highlight-top{
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .highlight-top svg{
-  width: 56px;
-  height: 56px;
+  width: 56px !important;
+  height: 56px !important;
   stroke: var(--blue1);
   padding: 12px;
   background: linear-gradient(135deg, var(--blue3), var(--blue4));
@@ -824,7 +834,7 @@ body {
   color: var(--blue4);
 }
 .highlight-box-text{
-  color: var(--foreground);
+  color: var(--gray-800);
 }
 
 .dentist-slide {
@@ -864,7 +874,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
-  background-color: #ffffff24;
+  background-color: #ffffff33;
   z-index: 1;
   transition: all 0.7s linear;
 }
@@ -925,14 +935,22 @@ body {
 }
 
 
+/* RATING */
+#rating {
+  background-color: var(--gray-50);
+}
 .ratings{
   width: 100%;
   margin: 0 auto;
 }
 .rating{
   width: 70%;
+  padding: 32px;
+  border-radius: 16px;
   margin: 0 auto;
   padding-bottom: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px var(--gray-200);
 }
 .rating-text{
   font-size: 18px;
@@ -979,6 +997,7 @@ body {
 }
 
 
+/* LOCAL */
 .local-left, .local-right{
   flex: 1;
 }
@@ -1050,7 +1069,7 @@ footer{
   letter-spacing: 0.5px;
 }
 .footer-message p{
-  color: #ffffffcc;
+  color: #ffffffbd;
   font-size: 14px;
   line-height: 1.6;
   max-width: 320px;
@@ -1080,7 +1099,7 @@ footer{
   display: inline-block;
   font-size: 14px;
   margin-bottom: 6px;
-  color: #ffffffcc;
+  color: #ffffffbd;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -1095,7 +1114,7 @@ footer{
   margin-bottom: 12px;
 }
 .footer-ul-svg p{
-  color: #ffffffcc;
+  color: #ffffffbd;
   font-size: 14px;
 }
 .footer-ul-svg svg, .footer-div svg{
@@ -1109,7 +1128,7 @@ footer{
   transform: scale(1.1);
 }
 .footer-div p{
-  color: #ffffffcc;
+  color: #ffffffbd;
 }
 .footer-bottom{
   text-align: center;
@@ -1692,6 +1711,7 @@ footer{
   }
   .rating{
     width: 100%;
+    padding: 16px;
     padding-bottom: 20px;
   }
   .container, .container-col{
@@ -1827,7 +1847,11 @@ footer{
   .highlights-left {
     width: 100%;
   }
-  .highlight-list {
+  .highlight-list{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
     gap: 12px;
   }
   .highlights-text {
@@ -1836,11 +1860,14 @@ footer{
   .highlight-box {
     gap: 4px;
   }
+  .highlight-top {
+    margin-bottom: 8px;
+  }
   .highlight-top p {
-    font-size: 16px;
+    font-size: 20px;
   }
   .highlight-box-text{
-    font-size: 12px;
+    font-size: 14px;
   }
   .highlight-top svg {
     width: 36px;
@@ -1849,8 +1876,8 @@ footer{
     margin: 28px 0;
   }
   .rating-text{
-    font-size: 16px;
-    margin: 0px 44px;
+    font-size: 14px;
+    margin: 0px 24px;
   }
   .rating-person img {
     width: 64px;

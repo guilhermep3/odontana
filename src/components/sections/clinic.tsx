@@ -23,7 +23,7 @@ export const Clinic = () => {
           {clinicdata.map((item) => (
             <div key={item.id}
               data-aos="fade-down"
-              className={`local-box  ${item.id === 1 || item.id === 2 ? 'reveal-left' : 'reveal-right'}`}
+              className={`local-box ${item.id === 1 || item.id === 2 ? 'reveal-left' : 'reveal-right'}`}
             >
               <span>{item.span}</span>
               <p className="local-box-title">{item.title}</p>
