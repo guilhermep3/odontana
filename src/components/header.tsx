@@ -20,9 +20,9 @@ export const Header = () => {
               <ChevronDown className="arrow-down" />
               <div className="dropdown">
                 {sectionsData.map((item, index) => (
-                  <li key={index}>
+                  <div key={index}>
                     <a href={item.href}>{item.title}</a>
-                  </li>
+                  </div>
                 ))}
               </div>
             </li>

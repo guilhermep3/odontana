@@ -4,7 +4,7 @@ import { RatingSlide } from "@/components/ratingSlide";
 export const Rating = () => {
 
   return (
-    <section id="rating">
+    <section id="avaliacoes">
       <div className="container-col">
         <TitleSection toCenter={true}
           secId="Avaliações"

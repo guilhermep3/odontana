@@ -5,7 +5,7 @@ import { TitleSection } from "@/components/titleSection";
 export const Team = () => {
 
   return (
-    <section id="team">
+    <section id="time">
       <div className="team-container">
         <TitleSection toCenter={true}
           secId="Time"

@@ -4,7 +4,7 @@ import { highlightsData } from "@/data/highlightsData"
 export const Highlights = () => {
 
   return (
-    <section id="highlights">
+    <section id="diferenciais">
       <div className="container">
         <div className="highlights-left">
           <TitleSection toCenter={false}

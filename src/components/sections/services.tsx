@@ -20,7 +20,7 @@ export const Services = () => {
   };
 
   return (
-    <section id="services">
+    <section id="servicos">
       <div className="container">
         <TitleSection secId="Serviços"
           title={<>Serviços de <span>alta qualidade</span> para você</>} toCenter={true}
@@ -46,7 +46,7 @@ export const Services = () => {
             </div>
           ))}
         </div>
-        <Button href="/services" text="Ver todos" dataAos="zoom-in" />
+        <Button href="/servicos" text="Ver todos" dataAos="zoom-in" />
       </div>
       {showModal && modalItem && (
         <Modal infos={modalItem} setShowModal={() => setShowModal(!showModal)} />

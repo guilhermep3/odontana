@@ -4,7 +4,7 @@ export const Clinic = () => {
   const clinicdata = clinicData;
 
   return (
-    <section id="clinic">
+    <section id="clinica">
       <div className="container-col">
         <div className="local-image"
           style={{ backgroundImage: "url('/clinic-bg.jpg')" }}

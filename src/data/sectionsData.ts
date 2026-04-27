@@ -1,10 +1,10 @@
 export const sectionsData = [
   { title: 'Início', href: '#hero' },
-  { title: 'Sobre', href: '#about' },
-  { title: 'Serviços', href: '#services' },
-  { title: 'Clínica', href: '#clinic' },
-  { title: 'Diferenciais', href: '#highlights' },
-  { title: 'Time', href: '#team' },
-  { title: 'Avaliações', href: '#rating' },
+  { title: 'Sobre', href: '#sobre' },
+  { title: 'Serviços', href: '#servicos' },
+  { title: 'Clínica', href: '#clinica' },
+  { title: 'Diferenciais', href: '#diferenciais' },
+  { title: 'Time', href: '#time' },
+  { title: 'Avaliações', href: '#avaliacoes' },
   { title: 'Local', href: '#local' }
 ]

@@ -4,7 +4,7 @@ import { BadgeCheck } from "lucide-react"
 export const About = () => {
 
   return (
-    <section id="about">
+    <section id="sobre">
       <div className="container">
         <div className="about-right">
           <img data-aos="fade-up" src="./about/about-1.png" alt="pessoa no dentista" className="about-img1" />
@@ -41,7 +41,7 @@ export const About = () => {
               <p>Servico de emergências</p>
             </li>
           </ul>
-          <Button text="Ver mais sobre nós" href="/about" dataAos="zoom-in" />
+          <Button text="Ver mais sobre nós" href="/sobre" dataAos="zoom-in" />
         </div>
       </div>
     </section>
